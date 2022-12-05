@@ -41,4 +41,12 @@ branch 'main' set up to track 'origin/main'.
 ---------------------------------------- 
  
 C:\Users\CarryWho\Desktop\tiddlywiki 
+<<<<<<< HEAD
 >>>>>>> e445639 (Bat script auto commit)
+=======
+[main e445639] Bat script auto commit
+ 2 files changed, 55 insertions(+)
+ create mode 100644 "tiddlers/Git\350\256\276\347\275\256\344\273\243\347\220\206.tid"
+---------------------------------------- 
+ 
+>>>>>>> bd65efe (Updated with Git-Sync)
