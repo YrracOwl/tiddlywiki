@@ -1,6 +1,6 @@
 created: 20221205115911787
 creator: hanassel
-modified: 20221205120444519
+modified: 20221205121032359
 modifier: hanassel
 tags: git
 title: 脱离太记的自动Git提交和拉取脚本
@@ -29,7 +29,7 @@ cd ..
 
 set /p chosedAction=chose your operation(1.push to... or 2.pull from or 3.do noting)?(1/2/3?)
 
-if /i %%chosedAction == 1 (
+if "%chosedAction%" == "1" (
     echo off
     echo ==============Commit Start============== >> AutoGit.log
     set d=%date:~0,10%
@@ -48,7 +48,7 @@ if /i %%chosedAction == 1 (
     cd ..
     ) 
     echo ==============Commit Ended============== >> AutoGit.log
-) else if /i %%chosedAction == 2 (
+) else if "%chosedAction%" == "2" (
     echo off
     echo ==============Pull Start============== >> AutoGit.log
     set d=%date:~0,10%
