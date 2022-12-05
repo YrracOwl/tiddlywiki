@@ -1,6 +1,6 @@
 created: 20221205115911787
 creator: hanassel
-modified: 20221205121032359
+modified: 20221205121554752
 modifier: hanassel
 tags: git
 title: 脱离太记的自动Git提交和拉取脚本
@@ -58,7 +58,7 @@ if "%chosedAction%" == "1" (
         cd %%i
         IF EXIST .git (
         echo %%i >> AutoGit.log
-        git pull >> AutoGit.log
+        git fetch --all &&  git reset --hard origin/main && git pull >> AutoGit.log
         echo ---------------------------------------- >> AutoGit.log
         echo. >> AutoGit.log
     )
