@@ -1,0 +1,53 @@
+created: 20221205025310427
+creator: hanassel
+modified: 20221205074103544
+modifier: hanassel
+tags: matlab
+title: Matlab parsim的用法
+type: text/vnd.tiddlywiki
+
+当前条目创建于{{!!created}}
+
+! 官方示例
+
+!! 选择扫描的变量
+
+首先需要针对想要并行扫描的参数进行选取，例如选择如下
+
+```
+FeedTempSweep = 250:10:300
+```
+
+!! 创建扫描输入的对象
+
+```
+for i = length(FeedTempSweep):-1:1
+	in(i) = Simulink.SimulationInput('CSTR');
+	in(i) = in(i).setVariable('FeedTemp0',FeedTempSweep(i));
+end
+```
+
+在m文件中启用
+
+```
+out = parsim(in, 'ShowSimulationManager', 'on')
+```
+
+!! 参考链接
+[[parsim官方介绍|https://www.mathworks.com/help/simulink/slref/parsim.html]]
+
+! 通俗示例
+
+```
+inputdBFS = -100:0;
+in = repmat(Simulink.SimulationInput, [1 length(inputdBFS)]);
+for index=1:1:length(inputdBFS)
+	in(index) = Simulink.SimulationInput('nb2244v01_adc_fltr');
+	in(index) = in(index).setVaraiable('Amp_sig',undbv(inputdBFS(index))*2.5);
+end
+
+out = parsim(in, 'ShowProgress', 'on', 'ShowSimulationManager', 'on', 'TransferBaseWorkspaceVariables', 'on');
+
+```
+
+此处参考了[[知乎的一篇文章|https://zhuanlan.zhihu.com/p/103049556]]
