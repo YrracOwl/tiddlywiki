@@ -22,6 +22,7 @@ branch 'main' set up to track 'origin/main'.
 ---------------------------------------- 
  
 C:\Users\CarryWho\Desktop\tiddlywiki 
+<<<<<<< HEAD
 =======
 E:\wikis\tiddlywiki 
 ---------------------------------------- 
@@ -33,3 +34,11 @@ E:\wikis\tiddlywiki
 ---------------------------------------- 
  
 >>>>>>> 7235c72 (Updated with Git-Sync)
+=======
+[main b2ada26] Bat script auto commit
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+branch 'main' set up to track 'origin/main'.
+---------------------------------------- 
+ 
+C:\Users\CarryWho\Desktop\tiddlywiki 
+>>>>>>> e445639 (Bat script auto commit)
