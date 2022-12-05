@@ -19,6 +19,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Matlab%2520parsim的用法</loc>
+		<lastmod>2022-12-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:TheBrain</loc>
 		<lastmod>2022-04-16</lastmod>
 		<changefreq>monthly</changefreq>
@@ -39,6 +45,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:TiddlyWikiIconWhite.png</loc>
 		<lastmod>2020-06-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:个人价值与工作价值</loc>
+		<lastmod>2022-12-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
