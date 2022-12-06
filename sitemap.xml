@@ -13,6 +13,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:2022年12月06日</loc>
+		<lastmod>2022-12-06</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:favicon.ico</loc>
 		<lastmod>2020-06-05</lastmod>
 		<changefreq>monthly</changefreq>
@@ -26,11 +32,6 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Matlab%2520parsim的用法</loc>
 		<lastmod>2022-12-05</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:scholar.bib</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -66,6 +67,12 @@
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:待办</loc>
+		<lastmod>2022-12-06</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:添加插页式待办UI宏(interstitial-ui-macro)</loc>
 		<lastmod>2022-12-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
