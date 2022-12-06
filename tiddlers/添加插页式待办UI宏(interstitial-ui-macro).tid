@@ -1,0 +1,10 @@
+caption: 添加插页式待办UI宏
+created: 20221206082712408
+creator: hanassel
+modified: 20221206084716641
+modifier: hanassel
+tags: $:/tags/TextEditor/Snippet
+title: 添加插页式待办UI宏(interstitial-ui-macro)
+type: text/vnd.tiddlywiki
+
+<<interstitial-ui base:"$(currentTiddler)$" caption:" ">>
