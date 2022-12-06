@@ -19,8 +19,18 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Import%2520Bibtex</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Matlab%2520parsim的用法</loc>
 		<lastmod>2022-12-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:scholar.bib</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
