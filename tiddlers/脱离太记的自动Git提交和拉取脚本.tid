@@ -1,10 +1,12 @@
 created: 20221205115911787
 creator: hanassel
-modified: 20221205121554752
+modified: 20221206005223480
 modifier: hanassel
 tags: git
 title: 脱离太记的自动Git提交和拉取脚本
 type: text/vnd.tiddlywiki
+
+''此脚本适用性待进一步验证''
 
 ! 脚本源码
 
