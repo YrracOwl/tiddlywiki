@@ -3,5 +3,5 @@
     "20221207032730649": "讨论了可变长度DEM算法， 目的在于在小输入信号的时候只让部分DAC阵列翻转，因为此时输入更小，也不用太考虑谐波",
     "20221207032826922": "noise shaping splitter专利需要再看看，均匀分布的noise太大的话，可能会造成更多的噪声的回踢",
     "20221207061150393": "目前Std VMS进行了5次扫描了，其中偶发SNDR线性度变差的情况，但是变差得有限",
-    "20221207074551498": "Dither注入: 评估DAC在不同的Dither注入算法的情况下的活跃度 <<todolist-ui base:\"$(CurrentTiddler)$\" captain:\"   \">>"
+    "20221207074551498": "Dither注入: 评估DAC在不同的Dither注入算法的情况下的活跃度 <<todolist-ui base:\"$(currentTiddler)$-todo\" captain:\"   \">>"
 }
