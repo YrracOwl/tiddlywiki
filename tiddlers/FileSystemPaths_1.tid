@@ -1,0 +1,9 @@
+created: 20221208072427116
+creator: hanassel
+modified: 20221208072431258
+modifier: hanassel
+title: FileSystemPaths.tid
+type: text/vnd.tiddlywiki
+
+[!is[system]kin::to[APrivateContent]addprefix[subwiki/private-wiki/]]
+[!is[system]kin::to[Photos]addprefix[subwiki/private-wiki-photos/]]
