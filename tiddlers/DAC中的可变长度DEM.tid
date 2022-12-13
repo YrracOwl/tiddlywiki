@@ -1,0 +1,28 @@
+created: 20221213065535979
+creator: hanassel
+modified: 20221213072057672
+modifier: hanassel
+tags: 专利阅读 DEM
+title: DAC中的可变长度DEM
+type: text/vnd.tiddlywiki
+
+! 专利名称
+VARABLE LENGTH DYNAMIC ELEMENT MATCHING IN DIGITAL-TO-ANALOG CONVERTERS
+
+! 专利摘要
+* 方法
+
+<<<
+跟随输入信号的包络（通过数字滤波器）来决定输入信号的幅度范围，因此在转换这个输入信号的时候，可以根据此幅度范围来采用一种DEM技术，这种技术允许只有必要数目的DAC cell被使用，这个数目取决于跟踪到的输入信号的幅度范围。
+<<<
+
+* 目的
+
+<<<
+* 对于小幅度的输入信号来说，mismatch error可能会更小
+* 未使用的DAC cell可以进入power saving模式，减小功耗
+<<<
+
+! 专利内容
+此专利的思路可以由下图所见。
+[img[DAC中可变长度DEM-流程图.png]]
