@@ -2,7 +2,6 @@ tags: $:/plugins/linonetwo/sub-wiki/readme
 title: $:/config/FileSystemPaths
 type: text/vnd.tiddlywiki
 
-[!is[system]kin::to[APrivateContent]addprefix[subwiki/private-wiki/]]
-[!is[system]kin::to[Photos]addprefix[subwiki/private-wiki-photos/]]
 
-[kin::to[APrivateContent]search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[subwiki]addprefix[/]addprefix[subwiki]]
+[!is[system]kin::to[APrivateContent]addprefix[subwiki/private-wiki/]]
+[!is[system]kin::to[Photos]addprefix[subwiki/private-wiki-photos/]]
