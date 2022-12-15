@@ -1,6 +1,6 @@
 created: 20221213065535979
 creator: hanassel
-modified: 20221213083544575
+modified: 20221215074026120
 modifier: hanassel
 tags: 专利阅读 DEM
 title: DAC中的可变长度DEM
@@ -26,6 +26,4 @@ VARABLE LENGTH DYNAMIC ELEMENT MATCHING IN DIGITAL-TO-ANALOG CONVERTERS
 ! 专利内容
 此专利的思路可以由下图所见。
 [img[DAC中可变长度DEM-流程图.png]]
-
-!! 背景介绍
 
