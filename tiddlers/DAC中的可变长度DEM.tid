@@ -1,6 +1,6 @@
 created: 20221213065535979
 creator: hanassel
-modified: 20221216080836570
+modified: 20221216112827990
 modifier: hanassel
 tags: 专利阅读 DEM
 title: DAC中的可变长度DEM
@@ -32,17 +32,10 @@ VARABLE LENGTH DYNAMIC ELEMENT MATCHING IN DIGITAL-TO-ANALOG CONVERTERS
 !! 内容梳理
 
 # 将阈值电压从最小到最大按顺序排列，确保从最小的阈值开始
-
 # 存在不同的选择DAC cell的方式：使用__连续__的DAC cell，如0~7,或者3~10；使用__不连续__的DAC cell，如0,3,4~6,11,13和15
-
 # subset DAC的使用导致了更小的shaped mismatch error。仿真可以确认采用subset DAC时，用一阶DEM可以产生高阶的DEM算法
-
 # 输入信号的跟随可以采用Sliding window来滑动平均ADC的输出得到包络，或者直接使用滤波器的输出
-
 # 输入信号的跟随也可以只获取一次，同时阈值的判断和subset DAC也只选择一次
-
 # 在DEM中什么时候切换到下一个DEM循环取决于“cumulative error to mismatch”，当它趋于0的时候就切换。“cumulative error”指得是__在一段时间内，每一拍所有的static mismatch error的和__。
-
 # 当一段DEM完成准备切入下一段DEM时的表现：01.桶形移位器里所有的elements被使用的频数是相等的；02.所有元素的cumulative error趋于0
-
 # 什么时候认为cumulative error趋于0？给定两个指针：RefPointer与CurrentPointer，RefPointer始终指向0，CurrentPointer跟随DEM算法的运行而改变，当CurrentPointer=RefPointer时，即认为cumulative error为0，此时是个较好的时机切入下一个subset DAC(即根据跟随的输入来和阈值做比较，判断要不要切换subset DAC)
