@@ -1,6 +1,6 @@
 created: 20221219061908275
 creator: hanassel
-modified: 20221219070230977
+modified: 20221219081228297
 modifier: hanassel
 tags: DEM DSM 论文阅读
 title: 多比特DSM中的ADWA技术
@@ -9,13 +9,19 @@ type: text/vnd.tiddlywiki
 ! 论文名称
 Advancing Data Weighted Averaging Technique for Multi-Bit Sigma–Delta Modulators
 
+<<<
+Lee, Da-Huei, and Tai-Haur Kuo. "Advancing data weighted averaging technique for multi-bit sigma–delta modulators." IEEE Transactions on Circuits and Systems II: Express Briefs 54.10 (2007): 838-842.
+<<<
+
 ! 论文摘要
 ADWA算法能够获得tone-supressing以及tone-transferring技术。通过配置当前element selection cycle与下一cycle的起始指针的步进，可以实现两种算法。一个固定的step(fixed step)能够实现tone-transferring，一个随机的step可以实现tone-supressing。
 
 ! 论文内容
 ADWA算法不需要改进传统的DWA算法的硬件，只需要在每一个selection cycle的起始元素的选择上改变±S个steps。由于elements的限制，`-S`步等效于`N-S`步，所以在此算法里只考虑正整数的S，那么S的定义域就是`{1,2,3,4,...,(N-1)}`，其中N是elements的个数。
 
-!! 固定步进(fixed step)
+!! 固定步进(Fixed-S ADWA)
+
+!!! 固定步进的操作逻辑
 论文给出了固定步进(fixed step=1)下的效果，以及基本的运算逻辑，例子如下图所示。
 
 [img[fixed-S-ADWA-例子1.png]]
@@ -28,8 +34,57 @@ ADWA算法不需要改进传统的DWA算法的硬件，只需要在每一个sele
 
 逻辑：
 
-* 对于codes 2和3来说，此时是`1st Cycle`，`starting element`是0，输出选择`{U0,U1}`和`{U2,U3,U4}`
-* 对于codes 5来说，由于5+5已经超过了eles的个数8，所以进入`2nd Cycle`，此时`starting element`从0变为1，即输出选择`{U5,U6,U7,U1,U2}`
-* 对于codes 8来说，理论上3+8>8，此时进入`3rd Cycle`，`starting element`__应当__从1变为2，输出选择`{U3,U4,U5,U6,U7,U2,U3}`，也就是说`U3`被选择两次，但是//在同一个采样周期里面，选择两次同样的DAC Cell会导致DAC工作频率翻倍//，因此`starting element`的`advancing action`被跳过了，此时的`starting element`仍旧是''1''，DAC的输出为`{U3,U4,U5,U6,U7,U1,U2}`
-* 对于codes 7来说，此时进入`4th Cycle`，`starting element`从1变为2，输出选择`{U2,U3,U4,U5,U6,U7,U0}`
+* 对于codes 2和3来说，此时是''1st Cycle''，starting element是0，输出选择`{U0,U1}`和`{U2,U3,U4}`
+* 对于codes 5来说，由于5+5已经超过了eles的个数8，所以进入''2nd Cycle''，此时starting element从0变为1，即输出选择`{U5,U6,U7,U1,U2}`
+* 对于codes 8来说，理论上3+8>8，此时进入''3rd Cycle''，starting element__应当__从1变为2，输出选择`{U3,U4,U5,U6,U7,U2,U3}`，也就是说`U3`被选择两次，但是__在同一个采样周期里面，选择两次同样的DAC Cell会导致DAC工作频率翻倍__，因此starting element的advancing action''被跳过了''，此时的starting element仍旧是''1''，DAC的输出为`{U3,U4,U5,U6,U7,U1,U2}`
+* 对于codes 7来说，此时进入''4th Cycle''，starting element从1变为2，输出选择`{U2,U3,U4,U5,U6,U7,U0}`
+
+总结：
+
+* 当x+S<=N时，starting element按照常规的计算方法，每一个新的Cycle就增加Fixed Step
+* 当x+S>N时，starting element保持不变，这个Cycle不会增加，目的是保证不会在一个采样周期里选择同一个元素两次
+
+注：x是DAC输入的code，S是固定步长即fixed-step，N是DAC总长度
+
+!!! 固定步进的性能
+fixed-step=1的ADWA的性能如下图所示，左图为DSM整体的输出，右图为-45dBFS时的DAC的mismatch spectra。
+
+[img[fixed-S-ADWA-例子1-性能.png]]
+
+由左图可见，实现了一个一阶的噪声整形,带内无可见的tone。而在带外，DAC的可见tone位于如下频率：
+
+[img[fixed-S-ADWA-例子1-公式2.png]]
+
+其中的''τ是S与N的g.c.d.(最大公约数)''。特别地，当输入信号幅度增大时，tone的集群会分散，参考论文`F. Chen and B. Leung, “Some observations on tone behavior in data weighted averaging,” in Proc. IEEE ISCAS, May 1998, pp. 500–503.`。
+
+为了保证OSR>=2，即保证过采样，通常要求OSR满足如下的不等式：
+
+[img[fixed-S-ADWA-例子1-公式3.png]]
+
+根据公式(3)，选择`S=1/3*N`，那么就可以保证OSR>=6。''这对于低OSR应用，特别是在宽带通信(wide-band communications)中是很有用的''。
+
+!! 随机步进(Random ADWA)
+
+!!! 随机步进的操作逻辑
+随机步进的操作逻辑与固定步进一致，区别在于，''固定步进的starting element每一个Cycle前进S步，而随机步进的starting element每一个Cycle前进随机步''。此时由于步进被随机化，那么产生的谐波也随机化了。如下图给出了S=1与S=2时的固定步进ADWA的差异，可以看到tone的能量有被平摊的趋势。
+
+[img[fixed-S-ADWA-例子2-不同的固定步进对比.png]]
+
+!!! 随机步进的优缺点
+* ''优点''：带内带外均看不到tones
+* ''缺点''：由于tones的能量被随机化了，那么带内的噪底会抬升，因此SNDR会下降
+
+!! ADWA与传统DWA对比
+
+!!! 电路
+除了增加了额外的Cycle判断与index在Cycle增加时的变化模块，其它无差异。
+
+!!! 性能
+ADWA性能更好，其输出SNDR的线性度更好，在某些信号幅度点内对于带内噪声的抑制更好。如下三图所示。
+
+[img[fixed-S-ADWA-性能对比-1.png]]
+
+[img[fixed-S-ADWA-性能对比-2.png]]
+
+[img[fixed-S-ADWA-性能对比-3.png]]
 
