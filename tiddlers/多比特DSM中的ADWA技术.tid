@@ -1,0 +1,35 @@
+created: 20221219061908275
+creator: hanassel
+modified: 20221219070230977
+modifier: hanassel
+tags: DEM DSM 论文阅读
+title: 多比特DSM中的ADWA技术
+type: text/vnd.tiddlywiki
+
+! 论文名称
+Advancing Data Weighted Averaging Technique for Multi-Bit Sigma–Delta Modulators
+
+! 论文摘要
+ADWA算法能够获得tone-supressing以及tone-transferring技术。通过配置当前element selection cycle与下一cycle的起始指针的步进，可以实现两种算法。一个固定的step(fixed step)能够实现tone-transferring，一个随机的step可以实现tone-supressing。
+
+! 论文内容
+ADWA算法不需要改进传统的DWA算法的硬件，只需要在每一个selection cycle的起始元素的选择上改变±S个steps。由于elements的限制，`-S`步等效于`N-S`步，所以在此算法里只考虑正整数的S，那么S的定义域就是`{1,2,3,4,...,(N-1)}`，其中N是elements的个数。
+
+!! 固定步进(fixed step)
+论文给出了固定步进(fixed step=1)下的效果，以及基本的运算逻辑，例子如下图所示。
+
+[img[fixed-S-ADWA-例子1.png]]
+
+说明：
+
+* 输入的序列为`{2,3,5,8,7}`
+* DAC的总单元数为8，即有8个elements
+* fixed-step=1
+
+逻辑：
+
+* 对于codes 2和3来说，此时是`1st Cycle`，`starting element`是0，输出选择`{U0,U1}`和`{U2,U3,U4}`
+* 对于codes 5来说，由于5+5已经超过了eles的个数8，所以进入`2nd Cycle`，此时`starting element`从0变为1，即输出选择`{U5,U6,U7,U1,U2}`
+* 对于codes 8来说，理论上3+8>8，此时进入`3rd Cycle`，`starting element`__应当__从1变为2，输出选择`{U3,U4,U5,U6,U7,U2,U3}`，也就是说`U3`被选择两次，但是//在同一个采样周期里面，选择两次同样的DAC Cell会导致DAC工作频率翻倍//，因此`starting element`的`advancing action`被跳过了，此时的`starting element`仍旧是''1''，DAC的输出为`{U3,U4,U5,U6,U7,U1,U2}`
+* 对于codes 7来说，此时进入`4th Cycle`，`starting element`从1变为2，输出选择`{U2,U3,U4,U5,U6,U7,U0}`
+
