@@ -31,6 +31,11 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:fixed-S-ADWA-例子1.png</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:icons8-communism-64.png</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
@@ -73,6 +78,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:个人价值与工作价值</loc>
 		<lastmod>2022-12-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:多比特DSM中的ADWA技术</loc>
+		<lastmod>2022-12-19</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
