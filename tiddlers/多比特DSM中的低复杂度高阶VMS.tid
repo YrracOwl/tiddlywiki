@@ -1,0 +1,48 @@
+created: 20221220020656532
+creator: hanassel
+modified: 20221220034558244
+modifier: hanassel
+tags: 论文阅读 DEM DSM
+title: 多比特DSM中的低复杂度高阶VMS
+type: text/vnd.tiddlywiki
+
+! 论文名称
+Low-Complexity High-Order Vector-Based Mismatch Shaping in Multibit ΔΣ ADCs
+
+<<<
+Sun, Nan, and Peiyan Cao. "Low-Complexity High-Order Vector-Based Mismatch Shaping in Multibit $\Delta\Sigma $ ADCs." IEEE Transactions on Circuits and Systems II: Express Briefs 58.12 (2011): 872-876.
+<<<
+
+! 论文摘要
+本论文提出的VMS设计拥有低复杂度，它的复杂度只随DAC的elements个数线性增长。而与已有的低复杂度VMS比较，它又不需要额外的Filter，并且它还拥有更好的mismatch整形效果和更好的稳定性。
+
+! 论文内容
+论文分为两部分，第一部分给出了前置的参考论文，第二部分在此基础上进行了改进，得到了本文的结构。
+
+!! 前置论文
+
+<<<
+A. Yasuda, H. Tanimoto, and T. Iida, “A third-order Δ−Σ modulator using second-order noise-shaping dynamic element matching,” IEEE J. Solid-State Circuits, vol. 33, no. 12, pp. 1879–1886, Dec. 1998.
+<<<
+
+传统的VMS存在一个缺点，那就是很高的硬件复杂度。其中的排序模块Sorter，因为要针对N个变量进行高速的完全排序，此时复杂度呈N^^2^^增长。为了减小复杂度，可以采用部分排序，可以将复杂度的增长变为N。如下图所示。
+
+[img[多比特DSM中的低复杂度高阶VMS-前置-原理图.png]]
+
+缺点：
+
+* 需要N-1个额外的filters，这些filters占据了芯片空间并且消耗了额外的power
+* mismatch整形效果和稳定性都变差了，相比Std VMS来说，对N=8的情况噪底抬升20dB，对于N>=16的情况此技术不稳定
+* 此技术只准确比较了相邻两个element的大小，导致了很大的vector quantization noise
+
+!! 本论文
+此论文基于前置论文的结构，修改了结构来去掉了额外的filters，并且通过设计新的partial sorter和新的filter来提高了整形效果和稳定性
+
+!!! 新原理图
+由于滤波是个线性操作：先加再滤波等效于先滤波再加，所以在此原理上修改了前置论文的结构图。通过此方法消除了额外的filters的使用，这几乎在不消耗任何代价的情况下就将前置论文的面积减小了50%。
+
+[img[多比特DSM中的低复杂度高阶VMS-原理图.png]]
+
+!!! 新滤波器
+提高整形效果与稳定性的关键在于设计一个新的filter，由于标准的二阶整形滤波器的MTF是(1-Z^^-1^^)^^2^^，
+
