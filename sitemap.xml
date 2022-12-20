@@ -13,6 +13,18 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:A%25200.37mm2%2520250kHz-BW%252095dB-SNDR%2520CTDSM%2520with%2520Low-Cost%25202nd-order%2520Vector-Quantizer%2520DEM</loc>
+		<lastmod>2022-12-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Advancing%2520Data%2520Weighted%2520Averaging%2520Technique%2520for%2520Multi-Bit%2520Sigma–Delta%2520Modulators</loc>
+		<lastmod>2022-12-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:DAC中可变长度DEM-流程图.png</loc>
 		<lastmod>2022-12-13</lastmod>
 		<changefreq>monthly</changefreq>
@@ -81,6 +93,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Low-Complexity%2520High-Order%2520Vector-Based%2520Mismatch%2520Shaping%2520in%2520Multibit%2520ΔΣ%2520ADCs</loc>
+		<lastmod>2022-12-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Matlab%2520parsim的用法</loc>
 		<lastmod>2022-12-05</lastmod>
 		<changefreq>monthly</changefreq>
@@ -117,14 +135,7 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://onetwo.ren/wiki/#:多比特DSM中的ADWA技术</loc>
-		<lastmod>2022-12-19</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://onetwo.ren/wiki/#:多比特DSM中的低复杂度高阶VMS</loc>
-		<lastmod>2022-12-20</lastmod>
+		<loc>https://onetwo.ren/wiki/#:基于NanSun的Partial-Sorter提出的新的PS.png</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
