@@ -123,6 +123,22 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:多比特DSM中的低复杂度高阶VMS</loc>
+		<lastmod>2022-12-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:多比特DSM中的低复杂度高阶VMS-前置-原理图.png</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:多比特DSM中的低复杂度高阶VMS-原理图.png</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:待办</loc>
 		<lastmod>2022-12-06</lastmod>
 		<changefreq>monthly</changefreq>
