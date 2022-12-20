@@ -1,0 +1,26 @@
+created: 20221220075926120
+creator: hanassel
+modified: 20221220084439556
+modifier: hanassel
+tags: 论文阅读 DEM SAR NSSAR
+title: A 0.37mm2 250kHz-BW 95dB-SNDR CTDSM with Low-Cost 2nd-order Vector-Quantizer DEM
+type: text/vnd.tiddlywiki
+
+! 论文名称
+A 0.37mm^^2^^ 250kHz-BW 95dB-SNDR CTDSM with Low-Cost 2^^nd^^-order Vector-Quantizer DEM
+
+<<<
+Shi, Wei, et al. "A 0.37 mm 2 250kHz-BW 95dB-SNDR CTDSM with Low-Cost 2 nd-order Vector-Quantizer DEM." 2022 IEEE Custom Integrated Circuits Conference (CICC). IEEE, 2022.
+<<<
+
+! 论文摘要
+在工业、医疗和汽车应用中，需要具有高分辨率和带宽大于200kHz的CTDSM。如此高的性能要求非常低的噪声和失真。由于电压余量低，在先进技术中必须进一步抑制噪声和失真。低噪声和失真设计的一个主要挑战是DAC和Loop Filter的大面积成本。采用了一阶Data Weighted Averageing（DWA），但对失配误差的抑制有限。由于DWA造成的tone，在低输入幅度下有一个输出SNDR的衰减，即输出SNDR vs 输入信号幅度存在非线性的下凹，称之为`kink`。为了减少面积，部分论文对MSB位使用DWA，对LSB位使用[[Mismatch Error Shaping]]（MES）。MES使二进制编码的DAC能够节省LSB DAC的面积。然而，整个DAC的失配引起的失真由MSB位主导。因此，部分论文的方法产生了有限的性能优势，因为从MSB位的DWA操作中获得了相对温和的一阶失配误差整形。
+
+本论文通过在MSB DAC上应用基于硬件效率的二阶Vector Quantizer（VQ）的DEM，大大减少了DAC总面积。二阶DEM不仅抑制了主要的MSB DAC失配误差，而且还缓解了一阶DWA的SNDR的`kink`问题。为了降低二阶DEM实现的高硬件复杂度，提出了一种partial-sorter算法(此算法的partial-sorter参见[[Low-Complexity High-Order Vector-Based Mismatch Shaping in Multibit ΔΣ ADCs]])。因此，以最小的硬件成本实现了激进的mismatch error shaping。Loop Filter也消耗了相当大的面积，因为严格的噪声要求通常需要小的电阻，因此需要大的集成电容。通过直接前馈，本论文将积分电容的面积减少了10倍。此外，它在很大程度上抑制了OTA的输出摆幅，从而在有限的电压供应下实现了低失真。总的来说，这项工作实现了95dB的SNDR和250kHz的BW，同时在1.1V的电源下消耗4.7mW，并且具有0.37mm^^2^^的紧凑面积。
+
+! 论文内容
+在此，本论文主要关注于其对`partial-sorter`的优化，因此给出本论文针对15 elements 的MSB DAC的部分排序如下所示。
+
+[img[基于NanSun的Partial-Sorter提出的新的PS.png]]
+
+从图上可知，它将15个element的DAC分为三片，每片是一个5bit的Complete Sorter，针对这三片采用3bit的Complete Sorter，对5bit的输出乘上分为3片的权重3，这样3bi tSorter出来的结果就是LSB，将它们整合，就可以得到一个Partial-Sorter的结果。

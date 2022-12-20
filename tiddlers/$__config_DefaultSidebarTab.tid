@@ -1,8 +1,8 @@
 created: 20221220014816771
 creator: LinOnetwo
-modified: 20221220014816771
+modified: 20221220084627721
 modifier: hanassel
 title: $:/config/DefaultSidebarTab
 type: text/vnd.tiddlywiki
 
-$:/core/ui/SideBar/Recent
+$:/core/ui/SideBar/More
