@@ -1,6 +1,6 @@
 created: 20221219061908275
 creator: hanassel
-modified: 20221221023850059
+modified: 20221222073222339
 modifier: hanassel
 tags: DEM DSM 论文阅读
 title: 适用于多比特DSM的ADWA技术
@@ -41,8 +41,10 @@ ADWA算法不需要改进传统的DWA算法的硬件，只需要在每一个sele
 
 总结：
 
+* 当x+ptr-startingElement>N时，代表进入新的Cycle
 * 当x+S<=N时，starting element按照常规的计算方法，每一个新的Cycle就增加Fixed Step
 * 当x+S>N时，starting element保持不变，这个Cycle不会增加，目的是保证不会在一个采样周期里选择同一个元素两次
+
 
 注：x是DAC输入的code，S是固定步长即fixed-step，N是DAC总长度
 
