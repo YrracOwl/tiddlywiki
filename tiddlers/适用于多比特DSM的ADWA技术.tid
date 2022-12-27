@@ -1,6 +1,6 @@
 created: 20221219061908275
 creator: hanassel
-modified: 20221222073222339
+modified: 20221227025935692
 modifier: hanassel
 tags: DEM DSM 论文阅读
 title: 适用于多比特DSM的ADWA技术
@@ -90,3 +90,13 @@ ADWA性能更好，其输出SNDR的线性度更好，在某些信号幅度点内
 
 [img[fixed-S-ADWA-性能对比-3.png]]
 
+! Simulink实现
+在Simulink中实现时，需要注意以下两点
+
+* 传统DWA的算法不需要改动，即先实现一个传统的DWA，使用桶形移位实现
+* 再在传统DWA的基础上，判断有无starting element的变化
+	** x+S>N，starting element不动，算法延续DWA，因为此时starting element动的话一定会出现在一个周期选中同一个DAC cell两次的情况
+	** x+S<=N
+		*** ptr+x<N+startingElement，延续传统DWA，startEle保持不变
+		*** ptr+x=N+startingElement，延续传统DWA，但是startEle进入下一个Cycle，即startEle=startEle+cycleStep
+		*** ptr+x>N+startingElement，startEle进入下一个Cycle，此时DAC cell的选择便不会选取两个startEle之间的cell
