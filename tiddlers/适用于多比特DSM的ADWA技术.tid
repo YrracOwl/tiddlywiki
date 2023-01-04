@@ -1,6 +1,6 @@
 created: 20221219061908275
 creator: hanassel
-modified: 20221229072125516
+modified: 20230103082638210
 modifier: hanassel
 tags: DEM DSM 论文阅读
 title: 适用于多比特DSM的ADWA技术
@@ -68,7 +68,7 @@ fixed-step=1的ADWA的性能如下图所示，左图为DSM整体的输出，右�
 !! 随机步进(Random ADWA)
 
 !!! 随机步进的操作逻辑
-随机步进的操作逻辑与固定步进一致，区别在于，''固定步进的starting element每一个Cycle前进S步，而随机步进的starting element每一个Cycle前进随机步''。此时由于步进被随机化，那么产生的谐波也随机化了。如下图给出了S=1与S=2时的固定步进ADWA的差异，可以看到tone的能量有被平摊的趋势。
+随机步进的操作逻辑与固定步进一致，区别在于，''固定步进的starting element每一个Cycle前进S步，而随机步进的starting element每一个Cycle是否随机前进S步''。此时由于步进被随机化，那么产生的谐波也随机化了。如下图给出了S=1与S=2时的固定步进ADWA的差异，可以看到tone的能量有被平摊的趋势。
 
 [img[fixed-S-ADWA-例子2-不同的固定步进对比.png]]
 
