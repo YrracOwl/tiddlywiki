@@ -1,0 +1,36 @@
+created: 20230109085341269
+creator: hanassel
+modified: 20230109090908345
+modifier: hanassel
+tags: ADC 基础
+title: 在ADC中Noise、ENOB和Effective Resolution的理解
+type: text/vnd.tiddlywiki
+
+原文外链：
+[[Understanding Noise, ENOB, and Effective Resolution in Analog-to-Digital Converters|https://www.analog.com/en/technical-articles/noise-enob-and-effective-resoluition-in-analog-to-digital-converter-circuits--maxim-integrated.html]]
+
+! 要点：
+
+!! Effective Resolution有效分辨率
+
+由如下公式定义：
+
+Effective resolution = log,,2,, [full-scale input voltage range/ADC RMS noise]
+
+或者更简单点：
+
+Effective resolution = log,,2,, [VIN/VRMS_NOISE]
+
+注意不要搞混Effective resolution与ENOB的区别。最常用的测量ENOB的方法是通过将正弦波输入ADC，对输出做FFT分析。IEEE的1057标准对ENOB定义如下：
+
+ENOB = log,,2,, [full-scale input voltage range/(ADC RMS noise × ''√12'')]
+
+!! SINAD信纳比
+
+SINAD定义为信号与噪声和失真之比。SINAD和ENOB通常被用来评估ADC的动态性能。
+
+所以：
+
+SINAD = [RMS input voltage/RMS noise voltage]
+
+RMS noise = $$\frac 1 M \Large \Sigma \normalsize EAVM(FM)^2$$
