@@ -261,6 +261,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:在ADC中Noise、ENOB和Effective%2520Resolution的理解</loc>
+		<lastmod>2023-01-09</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:基于NanSun的Partial-Sorter提出的新的PS.png</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
