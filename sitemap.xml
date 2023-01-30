@@ -267,6 +267,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:关于成型滤波器在matlab中的相关实现</loc>
+		<lastmod>2023-01-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:在ADC中Noise、ENOB和Effective%2520Resolution的理解</loc>
 		<lastmod>2023-01-09</lastmod>
 		<changefreq>monthly</changefreq>
@@ -315,6 +321,11 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:待办</loc>
 		<lastmod>2022-12-06</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:成型滤波器-demo1.png</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
