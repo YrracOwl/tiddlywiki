@@ -1,0 +1,42 @@
+created: 20230222061414161
+creator: hanassel
+modified: 20230222063309450
+modifier: hanassel
+tags: matlab simulink 伪随机数 LFSR
+title: PN Sequence Generator
+type: text/vnd.tiddlywiki
+
+* Matlab Version: 2021a
+* Object Format: simulink
+
+! 伪随机数发生器
+在matlab中，可以使用`PN Sequence Generator`来进行伪随机二进制数的产生，其原理是采用了[[Linear-Feedback Shift Register]]，即`LFSR`
+
+!! 重要参数
+其重要参数如下所示。
+
+* `Generator Polynomial`
+* `Initial States`
+* `Output Mask Vector`
+* `Sample Time`
+* `Samples Per Frame`
+
+!!! Generator Polynomial
+根据LFSR的原理，此参数决定了移位寄存器的反馈连接方式。其参数的填写方式参照//'z^8 + z^2 + 1', [1 0 0 0 0 0 1 0 1], and [8 2 0] represent the same polynomial, p(z) = z^^8^^ + z^^2^^ + 1//
+
+!!! Initial States
+给定仿真开始时的初始值，为一二进制行向量，向量的长度必须满足`Generator Polynomial`给定的LFSR深度。
+
+!!! Outpue Mask Vector
+此参数决定了PN Sequence从初始态到输出结果的延迟
+
+!!! Sample Time
+采样时间，即每隔多少Sample Time就输出一个Sample(采样点)
+
+!!! Samples Per Frame
+每次输出多少采样点，每次输出的间隔取决于`Sample Time * Samples per Frame`，举例说明：
+
+> 当Samples per Frame = 1, Sample Time = 1时，每1秒输出一个标量数据
+> 当Samples per Frame = 10, Sample Time = 1时，每10秒输出一个10x1的行向量
+
+即，采样时间没发生变化，但是输出的速率发生了变化，每次输出的数据长度也发生了变化
