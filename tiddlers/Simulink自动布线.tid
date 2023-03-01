@@ -1,0 +1,18 @@
+created: 20230301055104420
+creator: hanassel
+modified: 20230301055423507
+modifier: hanassel
+tags: matlab simulink
+title: Simulink自动布线
+type: text/vnd.tiddlywiki
+
+[[Simulink.BlockDiagram.routeLine|https://www.mathworks.com/help/simulink/slref/simulink.blockdiagram.routeline.html]]
+
+在Simulink中需要使用到布线，当simulink的版本等级高于9.5时，可以使用自动布线，如下代码所示。
+
+```matlab
+if ~verLessThan('simulink', '9.5')
+	lineHandles = find_system(gcs, 'FindAll', 'On', 'SearchDepth', 1, 'Type', 'Line');
+	Simulink.BlockDiagram.routeLine(lineHandles);
+end
+```
