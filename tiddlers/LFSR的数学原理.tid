@@ -1,6 +1,6 @@
 created: 20230301055622284
 creator: hanassel
-modified: 20230301083042187
+modified: 20230301090331210
 modifier: hanassel
 tags: LFSR 伪随机数
 title: LFSR的数学原理
@@ -101,5 +101,15 @@ $$ x^{16}+x^{14}+x^{13}+x^{11}+1$$
 * 抽头的数量必须为偶数
 * 抽头之间不能成对出现，必须是互质的
 
-本原多项式产生的寄存器序列被称之为[[M序列]]，在固定的N位下，由上述条件可知，本原多项式不是唯一的，也就是说[[M序列]]也不是唯一的。
+本原多项式产生的寄存器序列被称之为[[M序列]]，在固定的N位下，由上述条件可知，本原多项式不是唯一的，也就是说[[M序列]]也不是唯一的
+
+! References
+# [[线性反馈移位寄存器|https://zh.wikipedia.org/zh-hans/%E7%BA%BF%E6%80%A7%E5%8F%8D%E9%A6%88%E7%A7%BB%E4%BD%8D%E5%AF%84%E5%AD%98%E5%99%A8]]
+
+# [[【电子技术】什么是LFSR？|https://blog.csdn.net/qq_16423857/article/details/122391624]]
+
+# [[（九）详解线性反馈移位寄存器（LFSR）|https://zhuanlan.zhihu.com/p/366067972]]
+
+# [[模2运算的原理 模2加法，模2减法，模2乘法，模2除法|https://blog.sina.com.cn/s/blog_8e669acd0100um7x.html]]
+
 
