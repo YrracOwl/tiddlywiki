@@ -1,14 +1,11 @@
+Modern.TiddlyDev#SHA256-Hashed: 85010b019d35b30ae7a560d472fb81ca5f943a1144101549c305638fb6a0518d
 author: Gk0Wk
-created: 20211017131359719
-dependents: $:/plugins/tiddlywiki/codemirror-autocomplete
-description: TiddlyWiki5 highlighting mode for CodeMirror
-email: nmg_wk@yeah.net
+dependents: $:/plugins/tiddlywiki/codemirror-autocomplete $:/plugins/tiddlywiki/codemirror
+description: Your must-have CodeMirror enhancement plugin!
 list: readme ControlPanel LICENSE
-modified: 20211017131359719
-name: CodeMirror TW5 Enhanced
-parent-plugin: $:/plugins/tiddlywiki/codemirror
+name: CodeMirror Enhanced
 plugin-type: plugin
 source: https://github.com/Gk0Wk/TW5-CodeMirror-Enhanced
 title: $:/plugins/Gk0Wk/TW5-CodeMirror-Enhanced
 type: application/json
-version: 0.1.1
+version: 0.1.3

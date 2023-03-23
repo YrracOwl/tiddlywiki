@@ -1,0 +1,10 @@
+Modern.TiddlyDev#SHA256-Hashed: 870847c5aa58a1c21a0b8deba2278379ff83726073c443f978e409f3cc3a146c
+author: Gk0Wk
+dependents: $:/plugins/tiddlywiki/markdown
+description: ChatGPT in TiddlyWiki
+list: readme config
+name: ChatGPT
+plugin-type: plugin
+title: $:/plugins/Gk0Wk/chat-gpt
+type: application/json
+version: 0.0.6
