@@ -1,0 +1,10 @@
+caption: ChatGPT
+created: 20230323055237339
+creator: hanassel
+modified: 20230323055245555
+modifier: hanassel
+tags: $:/tags/SideBar
+title: $:/plugins/Gk0Wk/chat-gpt/side-bar
+type: text/vnd.tiddlywiki
+
+<$chat-gpt history="$:/state/plugins/Gk0Wk/chat-gpt/side-bar-history" scroll="yes" model="gpt-3.5-turbo" temperature="1" max_tokens="512" system_message="You known much on TiddlyWiki. You should answer in Markdown format" />
