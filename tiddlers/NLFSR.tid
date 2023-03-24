@@ -1,0 +1,9 @@
+created: 20230324075018054
+creator: hanassel
+modified: 20230324075215866
+modifier: hanassel
+tags: 伪随机数
+title: NLFSR
+type: text/vnd.tiddlywiki
+
+正如[[PN Sequence Generator]]中所说的，LFSR中的模二操作是线性的，那么当异或变更为非线性的与、或、非操作时，LFSR便称为一个非线性的LFSR，即Non-Linear Feedback Shift Register.
