@@ -1,9 +1,26 @@
 created: 20230324075018054
 creator: hanassel
-modified: 20230324075215866
+modified: 20230327072057435
 modifier: hanassel
 tags: 伪随机数
 title: NLFSR
 type: text/vnd.tiddlywiki
 
 正如[[PN Sequence Generator]]中所说的，LFSR中的模二操作是线性的，那么当异或变更为非线性的与、或、非操作时，LFSR便称为一个非线性的LFSR，即Non-Linear Feedback Shift Register.
+
+!!! 异或
+|输入A|输入B|输出O|
+|0|0|0|
+|0|1|1|
+|1|0|1|
+|1|1|1|
+
+!!! 与门
+|输入A|输入B|输出O|
+|0|0|0|
+|0|1|0|
+|1|0|0|
+|1|1|1|
+
+!!! 总结
+异或操作是模2加法，符合加法的定义，是一个线性操作；而「与」或者「或」则不符合加法定义，是非线性的
