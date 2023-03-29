@@ -139,6 +139,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Virtuoso中将tran的仿真时间设置为受变量控制的方法</loc>
+		<lastmod>2023-03-29</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:一种可变长度的DEM算法</loc>
 		<lastmod>2022-12-21</lastmod>
 		<changefreq>monthly</changefreq>
