@@ -1,6 +1,6 @@
 created: 20221205025310427
 creator: hanassel
-modified: 20230329090235115
+modified: 20230329090334043
 modifier: hanassel
 tags: matlab tricks
 title: Matlab parsim的用法
@@ -14,13 +14,13 @@ type: text/vnd.tiddlywiki
 
 首先需要针对想要并行扫描的参数进行选取，例如选择如下
 
-```
+```python
 FeedTempSweep = 250:10:300
 ```
 
 !! 创建扫描输入的对象
 
-```
+```python
 for i = length(FeedTempSweep):-1:1
 	in(i) = Simulink.SimulationInput('CSTR');
 	in(i) = in(i).setVariable('FeedTemp0',FeedTempSweep(i));
@@ -29,7 +29,7 @@ end
 
 在m文件中启用
 
-```
+```python
 out = parsim(in, 'ShowSimulationManager', 'on')
 ```
 
@@ -38,7 +38,7 @@ out = parsim(in, 'ShowSimulationManager', 'on')
 
 ! 通俗示例
 
-```
+```python
 inputdBFS = -100:0;
 in = repmat(Simulink.SimulationInput, [1 length(inputdBFS)]);
 for index=1:1:length(inputdBFS)
