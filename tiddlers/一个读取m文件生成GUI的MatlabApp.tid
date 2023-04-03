@@ -1,0 +1,119 @@
+created: 20230403013840467
+creator: hanassel
+modified: 20230403015132418
+modifier: hanassel
+tags: matlab 工具
+title: 一个读取m文件生成GUI的MatlabApp
+type: text/vnd.tiddlywiki
+
+! 功能
+严格来讲，这不是一个matlab app，而是通过使用figure来替代app，实现了GUI。即在figure中添加了text，edit以及button。
+
+! 代码
+将以下代码保存到后缀为`.m`的文件中，在matlab中运行即可。
+
+```js
+clear global mfileData;
+global mfilename
+global mfileData mfileVarsLine mfileVars choseFilePath chosenFile varSpyFig
+
+[chosenFile,choseFilePath] = uigetfile('*.m','Select a .m file', mfilename,'MultiSelect','off');
+if chosenFile == 0
+    return
+end
+
+% mfilename = '/home/krhu/work/Matlab_krhu.Prj/mFileEncoder/testCode.m';
+mfilename = [choseFilePath chosenFile];
+fid_mfile = fopen(mfilename);
+if fid_mfile<0
+    error(['Cannot open file ' mfilename]);
+end
+mfileData = textscan(fid_mfile, '%s','delimiter','\n');
+mfileData_tmp = fileread(mfilename);
+fclose(fid_mfile);
+
+mfileVars = {};
+mfileVarsLine = {};
+recFlag = false;
+for indexLines = 1:length(mfileData{1})
+    strLines = strtrim(mfileData{1}{indexLines});
+    if contains(strLines,'clear')
+        continue;
+    end
+    
+    if strcmp(strLines,'% {{')
+        recFlag = true;
+        continue;
+    end
+    
+    if strcmp(strLines,'% }}')
+        recFlag = false;
+        continue;
+    end
+    
+    if recFlag
+%         disp(strLines)
+        eval(strLines);
+        [tok,rem] = strtok(strLines, '=');
+        if ~isempty(tok)
+            mfileVars{end+1} = strtrim(tok);
+            mfileVarsLine{end+1} = indexLines;
+        end
+    end
+   
+end
+
+varSpyFig = figure(2999);
+set(varSpyFig, 'Name', 'Variable Editor');
+set(varSpyFig, 'units', 'normalized');
+set(varSpyFig, 'position', [0.5,0.5,0.4,0.4]);
+set(varSpyFig, 'menubar', 'none');
+set(varSpyFig, 'numbertitle', 'off');
+varSpyFig.Visible = 'off';
+movegui(varSpyFig,'center')
+varSpyFig.Visible = 'On';
+
+for indexVars = 1:length(mfileVars)
+    uicontrol('style','text','units','normalized', 'position', [0.05, 1-0.05*indexVars,0.35,0.05],'string',[mfileVars{indexVars} ' = '],'HorizontalAlignment','Right','FontUnits','normalized','FontSize',0.8);
+    val = eval(mfileVars{indexVars});
+
+    if ~isnumeric(val)
+        editValue = strcat('''',val,'''');
+    else
+        editValue = num2str(val);
+    end
+    editbox = uicontrol('style','edit','units','normalized', 'position', [0.4, 1-0.05*indexVars,0.2,0.05],'string',editValue, 'tag',mfileVars{indexVars},'callback',{@updateVar,mfileData,mfileVars,mfileVarsLine});
+    if ~isnumeric(val)
+        set(editbox,'foregroundcolor','magenta')
+    end
+    uicontrol('style','text','units','normalized', 'position', [0.6, 1-0.05*indexVars,0.2,0.05],'string',[' Line: ' num2str(mfileVarsLine{indexVars})],'HorizontalAlignment','Left','FontUnits','normalized','FontSize',0.8,'ForegroundColor','#77AC30','FontAngle','italic');
+end
+
+btn = uicontrol('Style','pushbutton','String','Run','units','normalized','Position',[0.05,0.05,0.05,0.05],'Callback',{@run_mfile,mfileData,choseFilePath,chosenFile,varSpyFig},'FontUnits','normalized','FontSize',0.8);
+set(btn,'BackgroundColor','#77AC30')
+uicontrol('style','text','units','normalized', 'position', [0.12,0.05,0.85,0.05],'string',mfilename,'HorizontalAlignment','Left','FontUnits','normalized','FontSize',0.8);
+
+function updateVar(src, event,mfileData,mfileVars,mfileVarsLine)
+    global mfileData
+    tag = get(src,'tag');
+    newval = str2double(get(src,'string'));
+    assignin('base',tag,newval);
+    index = find(contains(mfileVars,tag));
+    disp(['   Original:   ' mfileData{1}{mfileVarsLine{index},1}])
+    mfileData{1}{mfileVarsLine{index},1} = [mfileVars{index} ' = ' get(src,'string') ';'];
+    disp(['   Modified:   ' mfileData{1}{mfileVarsLine{index},1}])
+    disp('   ------------------')
+end
+
+function run_mfile(hObject,eventdata, mfileData,choseFilePath,chosenFile,varSpyFig)
+    global mfileData
+    mfileContent = mfileData{1};
+    shadowFile = [choseFilePath chosenFile '.vslck'];
+    fileShadow = fopen(shadowFile, 'w+');
+    fprintf(fileShadow, "%s\n",mfileContent{:});
+    fclose(fileShadow);
+    fileRunning = fileread(shadowFile);
+    msgbox(["   Code is running...";"   Please donnot change anything when running..."], 'File is running', 'warn',"modal");
+    evalin('base',fileRunning)
+end
+```
