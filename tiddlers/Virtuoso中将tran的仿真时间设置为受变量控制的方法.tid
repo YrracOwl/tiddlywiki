@@ -1,6 +1,6 @@
 created: 20230329081609233
 creator: hanassel
-modified: 20230329082127645
+modified: 20230404031514635
 modifier: hanassel
 tags: virtuoso tricks
 title: Virtuoso中将tran的仿真时间设置为受变量控制的方法
@@ -8,6 +8,8 @@ type: text/vnd.tiddlywiki
 
 在Virtuoso中进行tran仿真时，可以将仿真时间设置为受变量控制，在tran的time字段填入如下字符串即可。
 
-<<code src:"100/VAR('FS')" language:"js" title:"">>
+```js
+100/VAR("Fs")
+```
 
 其中`FS`即为在`Design Variables`中给定的变量。
