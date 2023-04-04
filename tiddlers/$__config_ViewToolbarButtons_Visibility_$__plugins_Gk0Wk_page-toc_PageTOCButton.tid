@@ -1,8 +1,8 @@
 created: 20230404072204650
 creator: hanassel
-modified: 20230404072207994
+modified: 20230404075514050
 modifier: hanassel
 title: $:/config/ViewToolbarButtons/Visibility/$:/plugins/Gk0Wk/page-toc/PageTOCButton
 type: text/vnd.tiddlywiki
 
-hide
+show

@@ -1,0 +1,13 @@
+created: 20230404074820022
+creator: hanassel
+modified: 20230404074852243
+modifier: hanassel
+tags: $:/tags/TextEditor/Snippet
+title: 添加条目信息表格
+type: text/vnd.tiddlywiki
+
+|styled-table|k
+|!条目信息|
+|本条目创建时间：{{!!created}}|
+|本条目修改时间：{{!!modified}}|
+---
