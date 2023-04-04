@@ -1,0 +1,12 @@
+created: 20230404051042588
+creator: hanassel
+modified: 20230404051347571
+modifier: hanassel
+tags: $:/tags/Stylesheet
+title: myCustomStyle
+type: text/vnd.tiddlywiki
+
+.myTables {
+	width: 50%;
+	border: 2px solid #ddd
+}

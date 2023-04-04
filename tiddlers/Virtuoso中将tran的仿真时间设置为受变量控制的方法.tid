@@ -1,10 +1,14 @@
 created: 20230329081609233
 creator: hanassel
-modified: 20230404031514635
+modified: 20230404051039626
 modifier: hanassel
 tags: virtuoso tricks
 title: Virtuoso中将tran的仿真时间设置为受变量控制的方法
 type: text/vnd.tiddlywiki
+
+|myTables|k
+|本条目创建时间：{{!!created}}|
+|本条目修改时间：{{!!modified}}|
 
 在Virtuoso中进行tran仿真时，可以将仿真时间设置为受变量控制，在tran的time字段填入如下字符串即可。
 
