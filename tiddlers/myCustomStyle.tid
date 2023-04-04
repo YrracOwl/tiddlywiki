@@ -1,6 +1,6 @@
 created: 20230404051042588
 creator: hanassel
-modified: 20230404061611154
+modified: 20230404062102651
 modifier: hanassel
 tags: $:/tags/Stylesheet
 title: myCustomStyle
@@ -8,13 +8,13 @@ type: text/vnd.tiddlywiki
 
 .styled-table {
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   border-collapse: separate;
   border-spacing: 0; 
   border: 2px solid #acacac;
   width: 50%;
-  margin: 50px auto;
-  border-radius: .25rem;
+  margin: 18px auto;
+  border-radius: .75rem;
 }
 
 .styled-table thead tr:first-child {
