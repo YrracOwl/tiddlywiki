@@ -1,12 +1,55 @@
 created: 20230404051042588
 creator: hanassel
-modified: 20230404051347571
+modified: 20230404061611154
 modifier: hanassel
 tags: $:/tags/Stylesheet
 title: myCustomStyle
 type: text/vnd.tiddlywiki
 
-.myTables {
-	width: 50%;
-	border: 2px solid #ddd
+.styled-table {
+  text-align: center;
+  line-height: 40px;
+  border-collapse: separate;
+  border-spacing: 0; 
+  border: 2px solid #acacac;
+  width: 50%;
+  margin: 50px auto;
+  border-radius: .25rem;
+}
+
+.styled-table thead tr:first-child {
+  background: #ed1c40;
+  color: #fff;
+  border: none;
+}
+ 
+.styled-table th:first-child,
+.styled-table td:first-child {
+  padding: 0 15px 0 20px;
+}
+
+.styled-table th {
+  font-weight: bold;
+}
+
+.styled-table thead tr:last-child th {
+  border-bottom: 3px solid #ddd;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f2f2f2;
+  cursor: default;
+}
+
+.styled-table tbody tr:last-child td {
+  border: none;
+}
+
+.styled-table tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table td:last-child {
+  text-align: left;
+  padding-right: 10px;
 }

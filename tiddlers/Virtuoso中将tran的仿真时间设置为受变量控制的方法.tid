@@ -1,12 +1,13 @@
 created: 20230329081609233
 creator: hanassel
-modified: 20230404051039626
+modified: 20230404055242219
 modifier: hanassel
 tags: virtuoso tricks
 title: Virtuoso中将tran的仿真时间设置为受变量控制的方法
 type: text/vnd.tiddlywiki
 
-|myTables|k
+|styled-table|k
+|!条目信息|
 |本条目创建时间：{{!!created}}|
 |本条目修改时间：{{!!modified}}|
 
