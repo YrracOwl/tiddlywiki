@@ -423,6 +423,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:添加条目信息表格</loc>
+		<lastmod>2023-04-04</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:脱离太记的自动Git提交和拉取脚本</loc>
 		<lastmod>2022-12-06</lastmod>
 		<changefreq>monthly</changefreq>
