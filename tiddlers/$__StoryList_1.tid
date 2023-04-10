@@ -1,2 +1,3 @@
-list: 蒲公英飘散之地
+list: $:/ControlPanel 蒲公英飘散之地
 title: $:/StoryList
+type: text/vnd.tiddlywiki
