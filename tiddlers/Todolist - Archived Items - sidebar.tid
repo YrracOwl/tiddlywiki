@@ -1,0 +1,18 @@
+created: 20230410090846874
+creator: hanassel
+modified: 20230410090846874
+modifier: hanassel
+tags: 
+td-namespace: sidebar
+title: Todolist - Archived Items - sidebar
+type: text/vnd.tiddlywiki
+
+\import $:/plugins/kookma/todolist/macros/archive-operations
+\import $:/plugins/kookma/todolist/macros/priority
+
+!! Archive of completed (done) items
+
+<$macrocall $name="todolist-empty-archived-tiddler" base={{!!td-namespace}} />
+
+> <$macrocall $name="todolist-list-archived-items"  base={{!!td-namespace}} />
+
