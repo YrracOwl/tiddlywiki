@@ -1,0 +1,26 @@
+/* style the line numbers */
+ol.code-list {
+	counter-reset: linenumber;
+}
+ol.code-list li {
+	counter-increment: linenumber;
+	position: relative;
+	margin-left: 3em;
+}
+/* customize the number */
+ol.code-list li::before {
+	/*	content: counter(linenumber) " ";*/
+	position: absolute;
+	width: 3em;
+	left:-3em;
+	top:-0.5em;
+	text-align: right;
+	vertical-align: middle;
+	padding:6px 10px 4px;
+
+}
+
+/* display line number only for selected lines */
+ol.code-list li.code-selected::before {
+	content: counter(linenumber) " ";
+}
