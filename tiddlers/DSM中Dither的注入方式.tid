@@ -1,16 +1,11 @@
 created: 20230410080547244
 creator: hanassel
-modified: 20230411015558396
+modified: 20230411080350667
 modifier: hanassel
 tags: DSM dither
 title: DSM中Dither的注入方式
 type: text/vnd.tiddlywiki
 
-|styled-table|k
-|!条目信息|
-|本条目创建时间：{{!!created}}|
-|本条目修改时间：{{!!modified}}|
----
 ! CIFF中的Dither注入
 在DSM中，为了打散量化器的输出pattern，以及抑制idle tone的影响，需要使用到dither，而dither的注入方式可以分为三种。
 
