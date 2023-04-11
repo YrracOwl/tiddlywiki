@@ -1,6 +1,6 @@
 created: 20230410080547244
 creator: hanassel
-modified: 20230410090342946
+modified: 20230411015558396
 modifier: hanassel
 tags: DSM dither
 title: DSM中Dither的注入方式
@@ -70,4 +70,16 @@ type: text/vnd.tiddlywiki
 
 [img[DSM中Dither的注入方式-方法C-01-ds.jpg]]
 
-此时对于dither的注入与消除，便无法得出一个有解的表达式。
+此时对于dither的注入与消除，便无法得出一个有解的表达式。给出此时在LoopFilter中，dither注入与消除的计算式子如下所示。
+
+> 注入量''(式1-1)''：//Dither*(1-Z^^-1^^)*d2*(-c1)*[(1+Z^^-1^^)/(1-Z^^-1^^)]//
+> 消除量''(式1-2)''：//Dither*Z^^-1^^*d1//
+> ''(式1-3)''=(式1-1)+(式1-2)=//Dither*d2*(-c1)*(1+Z^^-1^^)+Dither*Z^^-1^^*d1//
+
+而为了消除LoopFilter内的dither量，即需要保证''(式1-3)''为0，此时d1与d2无非零解。
+
+!! 问题
+针对double sampling引入的情况，存在以下疑问：
+
+# 在使用`double sampling`时，如何计算dither的各项系数
+# 在simulink中除了等效地将c1/b1系数翻倍，如何实现`double sampling`的传输函数(1+Z^^-1^^)/(1-Z^^-1^^)
