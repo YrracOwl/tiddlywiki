@@ -1,6 +1,7 @@
 created: 20230404051042588
 creator: hanassel
-modified: 20230404062102651
+icon: 
+modified: 20230411081207816
 modifier: hanassel
 tags: $:/tags/Stylesheet
 title: myCustomStyle
@@ -12,7 +13,7 @@ type: text/vnd.tiddlywiki
   border-collapse: separate;
   border-spacing: 0; 
   border: 2px solid #acacac;
-  width: 50%;
+  width: 39.5%;
   margin: 18px auto;
   border-radius: .75rem;
 }
@@ -41,15 +42,12 @@ type: text/vnd.tiddlywiki
   cursor: default;
 }
 
-.styled-table tbody tr:last-child td {
-  border: none;
-}
 
 .styled-table tbody td {
   border-bottom: 1px solid #ddd;
 }
 
 .styled-table td:last-child {
-  text-align: left;
+  text-align: center;
   padding-right: 10px;
 }
