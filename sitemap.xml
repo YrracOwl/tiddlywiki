@@ -38,6 +38,16 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:DSM中DoubleSampling的实现方式-01-积分相位.jpg</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:DSM中DoubleSampling的实现方式-01-采样相位.jpg</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:DSM中DoubleSampling的实现方式-01.jpg</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
