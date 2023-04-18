@@ -1,7 +1,7 @@
 created: 20230404051042588
 creator: hanassel
 icon: 
-modified: 20230411081207816
+modified: 20230418060556860
 modifier: hanassel
 tags: $:/tags/Stylesheet
 title: myCustomStyle
@@ -50,4 +50,8 @@ type: text/vnd.tiddlywiki
 .styled-table td:last-child {
   text-align: center;
   padding-right: 10px;
+}
+
+.tc-story-river .tc-tiddler-frame h1,h2,h3,h4 {
+	text-shadow: 3px 3px 3px #0000004f;
 }
