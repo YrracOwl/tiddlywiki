@@ -1,6 +1,6 @@
 created: 20230423033337603
 creator: hanassel
-list: DSM中DoubleSampling的实现方式 Simulink中的代数环 DSM中Dither的注入方式
+list: [[DoubleSampling中的offset cancellation]] DSM中DoubleSampling的实现方式 Simulink中的代数环 DSM中Dither的注入方式
 modified: 20230423064143883
 modifier: hanassel
 title: $:/StoryList
