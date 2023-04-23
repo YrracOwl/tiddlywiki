@@ -150,6 +150,22 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Simulink中的代数环</loc>
+		<lastmod>2023-04-23</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Simulink中的代数环-01.jpg</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Simulink中的代数环-02.jpg</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Simulink自动布线</loc>
 		<lastmod>2023-03-01</lastmod>
 		<changefreq>monthly</changefreq>
