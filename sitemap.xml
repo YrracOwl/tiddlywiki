@@ -480,6 +480,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:清除matlab中某个函数的persistent变量</loc>
+		<lastmod>2023-04-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:脱离太记的自动Git提交和拉取脚本</loc>
 		<lastmod>2022-12-06</lastmod>
 		<changefreq>monthly</changefreq>
