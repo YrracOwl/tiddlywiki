@@ -1,0 +1,13 @@
+created: 20230427072239328
+creator: hanassel
+modified: 20230427072308859
+modifier: hanassel
+tags: matlab tricks
+title: 清除matlab中某个函数的persistent变量
+type: text/vnd.tiddlywiki
+
+!如何清除matlab中某个函数的persistent变量
+
+* 使用clear命令加上函数名，例如<code>clear myFun</code>。这样可以清除myFun函数中声明的所有persistent变量。
+* 使用clear命令加上.m文件的名字，例如<code>clear myFile</code>。这样可以清除myFile中定义的所有函数（包括本地函数和嵌套函数）中声明的所有persistent变量。
+* 如果函数是在一个包中定义的，使用clear命令加上包名和函数名，例如<code>clear +foo_pkg/foo</code>。这样可以清除foo_pkg包中的foo函数中声明的所有persistent变量。
