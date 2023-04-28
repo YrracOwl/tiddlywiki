@@ -1,0 +1,29 @@
+created: 20230428131656104
+modified: 20230428132129367
+tags: 学习版 PCB
+title: AltiumDesigner2022学习版安装指南
+type: text/vnd.tiddlywiki
+
+! 教程地址
+[[AD 2022 破解版 Altium Designer 2022 中文下载 64位|https://www.znztool.com/software/1107571163.html]]
+
+! 学习方法
+# 解压并打开下载的安装包，双击运行"Installer.Exe"程序进入软件安装向导。 
+# 点击next。 
+# 在Select language栏下拉列表中选择“Chinese”语言，然后勾选安装许可协议，再点击Next。 
+#点击next。 
+# 根据需要修改软件的安装路径，默认是装在C盘的，本例装在D盘，点击Next。 
+# 点击Next。 
+# 点击Next。 
+# 等待安装。 
+# 安装完成后，取消勾选不要运行软件，直接退出向导即可，点击finish。 
+# 将破解文件下的“shfolder.dll”复制到源程序安装目录下； 默认的安装目录【C:\Program Files\Altium\AD22】。 
+# 打开开始菜单，运行软件，点击界面中的【Add standalone license file】。 
+# 将会弹出一个窗口，然后打开软件初始安装包ad211 unis licewnses文件夹，找到AD20-Sandy.alf文件，单击选中它后再点击打开。 
+# 软件将会自动显示软件许可有效期至2030年，表示已经成功激活，可免费使用所有功能。 14.接下来进行汉化，点击右上角的齿轮图标。 
+# 找到General页面，勾选“Use localized resources”，将会弹出一个界面，依次选择OK就可以了。 
+# 再重新打开软件，就显示中文的了。至此软件安装破解成功。
+
+! 学习资源
+链接：[[点我直达|https://pan.baidu.com/s/1QmqXtqy6VIocxG1k1R0lCg?pwd=mlpm]]
+提取码：mlpm
