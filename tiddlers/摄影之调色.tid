@@ -1,6 +1,6 @@
 created: 20230314141223811
 creator: hanassel
-modified: 20230425151436140
+modified: 20230505141204968
 modifier: hanassel
 tags: 摄影 调色
 title: 摄影之调色
@@ -30,3 +30,31 @@ type: text/vnd.tiddlywiki
 |! 特点 | 过曝保护 | 白色统一 |
 
 [[【【Lr工具课】第五讲 基本工具栏】 【精准空降到 24:54】|https://www.bilibili.com/video/BV1L841177c4/?share_source=copy_web&vd_source=658ed0f08e1db7d7038b2c78508c8266&t=1494]]
+
+!! 阴影和黑色色阶
+
+|styled-table|k
+|! | !阴影 | !黑色色阶 |
+|! 影响范围 | 小 | 大 |
+|! 改变内容 | 亮度、对比度 | 亮度 |
+|! 特点 | 黑色保护 | 黑色统一 |
+[[【【Lr工具课】第五讲 基本工具栏】 【精准空降到 28:55】 |https://www.bilibili.com/video/BV1L841177c4/?share_source=copy_web&vd_source=658ed0f08e1db7d7038b2c78508c8266&t=1735]]
+
+! 偏好
+!! 纹理、清晰度和去朦胧
+
+|styled-table|k
+|! | !纹理 | !清晰度 | !去朦胧 |
+|! 影响范围 | 小 | 中 | 大 |
+|! 改变内容 | 对比度 | 对比度 | 对比度、饱和度和亮度 |
+
+!! 鲜艳度和饱和度
+
+|styled-table|k
+|! | !鲜艳度 | !饱和度 |
+|! 影响范围 | 低饱和的色彩 | 全部色彩 |
+
+常用操作是，提高『鲜艳度』，再降低『饱和度』，可以让画面整体饱和度较为统一
+
+
+
