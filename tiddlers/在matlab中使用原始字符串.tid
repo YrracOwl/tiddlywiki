@@ -1,0 +1,29 @@
+created: 20230530060303458
+creator: hanassel
+modified: 20230530061138704
+modifier: hanassel
+tags: matlab tricks
+title: 在matlab中使用原始字符串
+type: text/vnd.tiddlywiki
+
+! 什么是原始字符串
+原始字符串指的就是字符串中的例如下划线`_`或者百分号`%`之类的字符不会被转义的字符串。
+
+! 在text中使用
+在绘制出波形之后，可以使用`Interpreter`属性来让标题的字符串是原始字符串。例如下列。
+
+```js
+fileNames = 'cosim_0x0x_0x';
+text(0.1, 0.95, ['File:   ' fileNames], 'Units', 'normalized', 'Interpreter', 'none');
+```
+
+此时将会在波形图的x=10%,y=95%的位置显示这个文字。
+
+//注：当归一化显示时，波形图的左下角是(0,0)，右上角是(1,1)//
+
+! 在任意地方使用
+只需要在字符串前面加上`r`代表`raw`即可。
+
+```js
+strTmp = r'test_raw_string';
+```
