@@ -1,0 +1,20 @@
+created: 20230619015452048
+creator: hanassel
+modified: 20230619090206286
+modifier: hanassel
+tags: 论文阅读
+title: BJT-Based Temperature Sensor
+type: text/vnd.tiddlywiki
+
+! A Sub-1V 810nW Capacitively-Biased BJT-Based Temperature Sensor with an Inaccuracy of ±0.15°C (3σ) from -55°C to 125°C
+* //Zhong Tang | Delft University of Technology//
+* //Sining Pan | Delft University of Technology && Tsinghua University//
+* //Kofi A. A. Makinwa | Delft University of Technology//
+
+!! 名词解释
+
+!!! BJT-based temperature sensor
+
+* (1-point calibration) excellent accuracy.
+* uWs of powers and requires supply above 1V -> sensors based on DTMOSTs, capacitively biased(CB) diodes and BJTs have demonstrated sub-1V operation.
+
