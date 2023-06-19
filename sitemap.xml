@@ -19,6 +19,12 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:BJT-Based%2520Temperature%2520Sensor</loc>
+		<lastmod>2023-06-19</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:DAC中可变长度DEM-思路.png</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
