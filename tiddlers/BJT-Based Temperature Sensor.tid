@@ -1,6 +1,6 @@
 created: 20230619015452048
 creator: hanassel
-modified: 20230619090206286
+modified: 20230621022700766
 modifier: hanassel
 tags: 论文阅读
 title: BJT-Based Temperature Sensor
@@ -16,5 +16,15 @@ type: text/vnd.tiddlywiki
 !!! BJT-based temperature sensor
 
 * (1-point calibration) excellent accuracy.
-* uWs of powers and requires supply above 1V -> sensors based on DTMOSTs, capacitively biased(CB) diodes and BJTs have demonstrated sub-1V operation.
+* uWs of powers and requires supply above 1V -> sensors based on DTMOSTs, capacitively biased(CB) diodes and BJTs have demonstrated sub-1V operation (at expense of accuracy)
 
+!! 摘要
+提出了一个sub-1V CB BJT-based temperature sensor。
+
+* 温度误差：
+** 经过1-point-trimmed后得到的温度误差(温度范围：-55℃~125℃)是0.15℃(3σ)，这个指标比现有的CB BJT好4倍。<<fnote "Z. Tang et al., “An Energy-Efficient Capacitively Biased Diode-Based Temperature Sensor in 55-nm CMOS,” IEEE SSCL, vol. 4, pp. 210-213, 2021.">>
+* FoM值
+** a resolution FoM of 0.34pJ∙K^^2^^，这个指标比现有的有相同精度的BJT-based sensors的指标好6.8倍。<<fnote "B. Yousefzadeh et al., “A BJT-Based Temperature-to-Digital Converter With ±60 mK (3σ) Inaccuracy From −55 °C to +125 °C in 0.16-μm CMOS,” IEEE JSSC, April 2017.">> <<fnote "T. Someya et al., “A 210nW BJT-based Temperature Sensor with an Inaccuracy of ±0.15°C (3σ) from −15°C to 85°C,” IEEE VLSIC, June 2022.">>
+
+
+<<showfnotes class:"fnote-pretty" title:"''Footnotes''">>

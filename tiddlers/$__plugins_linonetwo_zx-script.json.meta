@@ -1,10 +1,11 @@
+Modern.TiddlyDev#SHA256-Hashed: a8f2b2efb97ec69bdd202dbd220c19bf4d3548a844746353a53a1864c9a8d49a
 author: LinOnetwo
 core-version: >=5.1.22
 dependents: $:/plugins/linonetwo/itonnote
 description: ZX is a tool for writing better scripts, this plugin allows you to execute a tiddler with zx.
-list: readme developer demo
+list: readme demo developer
 name: ZX Script Executor
 plugin-type: plugin
 title: $:/plugins/linonetwo/zx-script
 type: application/json
-version: 0.1.3
+version: 0.2.1

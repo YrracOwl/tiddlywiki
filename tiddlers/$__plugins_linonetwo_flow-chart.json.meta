@@ -1,5 +1,5 @@
 Modern.TiddlyDev#ExternalModules: react react-dom
-Modern.TiddlyDev#SHA256-Hashed: 7d63398535583e347513d7bfdbff1b431b6b2c886b496cdead303efe956badfa
+Modern.TiddlyDev#SHA256-Hashed: 8438f3f1cdd08da6b1b32dafb3af5a86aa9ef3d85d9875ea21d2f6eda93fefff
 author: LinOnetwo
 core-version: >=5.1.22
 dependents: $:/plugins/linonetwo/tw-react
@@ -9,4 +9,4 @@ name: flow-chart
 plugin-type: plugin
 title: $:/plugins/linonetwo/flow-chart
 type: application/json
-version: 0.1.0
+version: 0.1.1
