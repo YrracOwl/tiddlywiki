@@ -1,6 +1,6 @@
 created: 20230619015452048
 creator: hanassel
-modified: 20230621034224319
+modified: 20230621064351605
 modifier: hanassel
 tags: 论文阅读
 title: BJT-Based Temperature Sensor
@@ -17,6 +17,13 @@ type: text/vnd.tiddlywiki
 
 * (1-point calibration) excellent accuracy.
 * uWs of powers and requires supply above 1V -> sensors based on DTMOSTs, capacitively biased(CB) diodes and BJTs have demonstrated sub-1V operation (at expense of accuracy)
+
+!!! Capacitively biased diodes (CB diodes)
+
+* 原理
+** 采样电容Cs首先被充电到电源电压，然后通过二极管放电。
+** 经过短暂的settle time后(10ns级)，Cs上的残留电压Vd将由二极管的IV特性曲线所唯一地决定，并且这个曲线是一个与电源无关的时间上的对数函数<<fnote "Z. Tang et al., “An Energy-Efficient Capacitively Biased Diode-Based Temperature Sensor in 55-nm CMOS,” IEEE SSCL, vol. 4, pp. 210-213, 2021.">> <<fnote "M. Eberlein et al., “A No-Trim, Scaling-Friendly Thermal Sensor in 16nm FinFET using Bulk-Diodes as Sensing Elements,” IEEE SSCL, vol. 2, no. 9, pp. 63-66, Sept. 2019.">>。
+
 
 !! 摘要
 提出了一个sub-1V CB BJT-based temperature sensor。
