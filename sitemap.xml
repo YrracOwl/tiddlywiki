@@ -25,6 +25,11 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:BJTbasedTempSensors-CBdiodes.png</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:DAC中可变长度DEM-思路.png</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
