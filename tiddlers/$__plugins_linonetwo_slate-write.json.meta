@@ -1,3 +1,5 @@
+Modern.TiddlyDev#ExternalModules: react react-dom
+Modern.TiddlyDev#SHA256-Hashed: 2692550a75cdcbca81b82a7378d886568ecb371c27cf3dfc93dfd7aebaa07d02
 author: LinOnetwo
 core-version: >=5.1.22
 dependents: $:/plugins/linonetwo/tw-react
@@ -7,4 +9,4 @@ name: Slate Write
 plugin-type: plugin
 title: $:/plugins/linonetwo/slate-write
 type: application/json
-version: 0.4.1
+version: 0.5.1

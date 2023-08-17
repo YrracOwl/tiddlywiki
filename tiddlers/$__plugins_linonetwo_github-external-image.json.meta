@@ -1,11 +1,11 @@
+Modern.TiddlyDev#SHA256-Hashed: 2cf4ce1c737b75662b44f8410e606dea90312442d42e9cb4f139e8d92b57eff5
 author: LinOnetwo
 core-version: >=5.1.22
-created: 20211017092855560
 dependents: 
 description: Use github as your image storage, add _canonical_uri to all image, pointing to raw.github
-list: readme
-modified: 20211017092855560
+list: readme ControlPanel/Settings
+name: github-external-image
 plugin-type: plugin
 title: $:/plugins/linonetwo/github-external-image
 type: application/json
-version: 0.0.1
+version: 0.1.0

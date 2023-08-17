@@ -1,4 +1,4 @@
-Modern.TiddlyDev#SHA256-Hashed: a8f2b2efb97ec69bdd202dbd220c19bf4d3548a844746353a53a1864c9a8d49a
+Modern.TiddlyDev#SHA256-Hashed: fe21225458c587c899d93b46c60c62a40d83b1cdb769f7aa225465260dd047a5
 author: LinOnetwo
 core-version: >=5.1.22
 dependents: $:/plugins/linonetwo/itonnote
@@ -8,4 +8,4 @@ name: ZX Script Executor
 plugin-type: plugin
 title: $:/plugins/linonetwo/zx-script
 type: application/json
-version: 0.2.1
+version: 0.2.2
